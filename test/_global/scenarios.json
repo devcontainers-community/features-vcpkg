@@ -1,9 +1,0 @@
-{
-    "all_tools": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "vcpkg": {},
-            "gitlab-ci-local": {}
-        }
-    }
-}

@@ -1,15 +1,37 @@
-# Dev Container Features
 
-Some features for dev container.
+# Vcpkg Tool (vcpkg)
 
-links:
-- https://github.com/devcontainers/feature-starter
-- https://containers.dev/implementors/features/
+A vcpkg tool feature
 
-## Available features
+## Example Usage
 
+```json
+"features": {
+    "ghcr.io/msclock/features/vcpkg:1": {}
+}
+```
 
-| Name | URL | Description |
-| ---  | --- | ---         |
-| vcpkg   | https://vcpkg.io/ | vcpkg is a free C/C++ package manager for acquiring and managing libraries. Choose from over 1500 open source libraries to download and build in a single step or add your own private libraries to simplify your build process. Maintained by the Microsoft C++ team and open source contributors. |
-| gitlab-ci-local   | https://github.com/firecow/gitlab-ci-local | Tired of pushing to test your .gitlab-ci.yml? Run gitlab pipelines locally as shell executor or docker executor. Get rid of all those dev specific shell scripts and make files. |
+## Options
+
+| Options Id | Description | Type | Default Value |
+|-----|-----|-----|-----|
+| username | Enter name of a non-root user to configure or none to skip | string | automatic |
+| vcpkgversion | Enter vcpkg version tag or stable or latest | string | latest |
+| vcpkgroot | Enter VCPKGROOT as vcpkg root path | string | /usr/local/vcpkg |
+| vcpkgdownload | Enter VCPKGDOWNLOAD as vcpkg download path | string | /usr/local/vcpkg-downloads |
+
+## Customizations
+
+### VS Code Extensions
+
+- `ms-vscode.cpptools`
+- `ms-vscode.cmake-tools`
+- `twxs.cmake`
+
+## Using vcpkg
+
+This feature includes [vcpkg package manager](https://github.com/microsoft/vcpkg). If CMake is not installed in advance, a suitable version will be installed into the path `/usr/local/bin/cmake` automatically from vcpkg.
+
+## OS Support
+
+This Feature should work on recent versions of Debian/Ubuntu, RedHat Enterprise Linux, Fedora, RockyLinux, and Alpine Linux.
